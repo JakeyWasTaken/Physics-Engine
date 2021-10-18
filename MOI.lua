@@ -28,7 +28,6 @@ function init()
 	for _,v in pairs(workspace:GetDescendants()) do
 		if v:IsA("BasePart") and not v:IsA("Terrain") then
 			if not v:FindFirstChild("Locked") and doesHaveAttributes(v) then
-				collisionHandler.generateObjectPoints(v)
 				table.insert(_G.PhysicsEngine.ObjectList,v)
 			end
 		end
